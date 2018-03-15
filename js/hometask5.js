@@ -11,6 +11,7 @@ let arrayM = [
 ];
 
 for (var i=0; i < 8; i++) {
+
     for (var j=0; j<8; j++) {
         var item = document.createElement('div');
         item.classList.add('chess_item');
@@ -21,6 +22,10 @@ for (var i=0; i < 8; i++) {
         }
         if( arrayM[i][j] ) {
             item.innerText = arrayM[i][j];
+        }
+
+        if( i >= 0 && i < 6 ) {
+            item.classList.add('white');;
         }
     }
 }
